@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-
+var PORT = process.argv.PORT || 8080;
 app.get('/', function(req, res){
   var userAgent = req.headers['user-agent'];
   var headerInfo = {
@@ -12,6 +12,6 @@ app.get('/', function(req, res){
   res.json(headerInfo);
 });
 
-app.listen(8080, function(){
-  console.log("Server running");
+app.listen(PORT, function(){
+  console.log("Server running on %s", PORT);
 });
