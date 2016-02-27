@@ -9,11 +9,7 @@ app.get('/', function(req, res){
     'operating system': userAgent.slice(userAgent.indexOf('(')+1,userAgent.indexOf(')'))
   };
   console.log("Sending header info:\n"+ JSON.stringify(headerInfo));
-  var others = {
-    "x-client-ip": req.headers['x-client-ip'],
-    "x-real-ip": req.headers['x-real-ip']
-  };
-  res.json(others);
+  res.json(headerInfo);
 });
 
 app.listen(PORT, function(){
