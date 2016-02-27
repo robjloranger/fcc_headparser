@@ -1,0 +1,18 @@
+{
+  "name":"headparser",
+  "version":"0.0.1",
+  "description":"a simple request parser, returning ip, language and os of requester",
+  "dependencies":{
+    "express":"~4.0.0"
+  },
+  "author":"rob j loranger <hello@robloranger.ca> (http://robloranger.ca)",
+  "license":"MIT",
+  "main":"server.js",
+  "scripts":{
+    "start":"node server.js"
+  },
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/robjloranger/fcc_headparser.git"
+  }
+}
