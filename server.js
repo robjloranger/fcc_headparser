@@ -5,6 +5,7 @@ app.get('/', function(req, res){
   var userAgent = req.headers['user-agent'];
   var headerInfo = {
     ip: req.ip.slice(req.ip.lastIndexOf(':')+1,req.ip.length),
+    "ip-alt": req.connection.remoteAddress,
     language: req.get("Accept-Language").slice(0,5),
     'operating system': userAgent.slice(userAgent.indexOf('(')+1,userAgent.indexOf(')'))
   };
