@@ -6,6 +6,7 @@ app.get('/', function(req, res){
   var headerInfo = {
     ip: req.ip.slice(req.ip.lastIndexOf(':')+1,req.ip.length),
     "ip-alt": req.connection.remoteAddress,
+    "ip-fwd": req.header['x-forwarded-for'],
     language: req.get("Accept-Language").slice(0,5),
     'operating system': userAgent.slice(userAgent.indexOf('(')+1,userAgent.indexOf(')'))
   };
